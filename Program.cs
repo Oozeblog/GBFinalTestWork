@@ -26,12 +26,13 @@ string[] CreateThreeCharArray(string[] array)
     }
     string[] threeCharArray = new string[size];
 
+    int j = 0;
     for (int i = 0; i < array.Length; i++)
     {
-        for (int j = 0; j < threeCharArray.Length; j++)
+        if(array[i].Length <= 3)
         {
-            if(array[i].Length <= 3)
             threeCharArray[j] = array[i];
+            j++;
         }
     }
     return threeCharArray;
